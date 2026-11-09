@@ -1,0 +1,45 @@
+{
+  "version": "0.1.0",
+  "historical_measurement_date": "2026-11-08",
+  "environment": {
+    "os": "Windows",
+    "python": "3.13.0",
+    "codex_cli": "0.166.0-alpha.5.1"
+  },
+  "unit_and_component_tests": {"run": 38, "failures": 0, "errors": 0},
+  "native_codex_local_mock": {
+    "passed": true,
+    "isolated_codex_home": true,
+    "restored_original_bytes": 2103364,
+    "configuration_enable_disable_verified": true
+  },
+  "offline_mv_replay": {
+    "json_before_bytes": 202082300,
+    "json_after_bytes": 9632512,
+    "zstd_before_bytes": 144064084,
+    "zstd_after_bytes": 6603543,
+    "zstd_reduction_percent": 95.41624614779073,
+    "images_before": 215,
+    "images_after": 18,
+    "original_hash_checks": 211,
+    "cold_rewrite_seconds": 6.139,
+    "warm_rewrite_seconds": 2.952,
+    "network_requests": 0,
+    "limits": "One reconstructed historical context, not an exact historical wire body, public reproducible dataset, VPN bill or model quality evaluation."
+  },
+  "live_synthetic_image_smoke": {
+    "passed": true,
+    "model": "gpt-6-astra",
+    "requests": 1,
+    "encoded_request_before_bytes": 1731682,
+    "encoded_request_after_bytes": 227323,
+    "seconds": 9.399,
+    "global_configuration_unchanged": true
+  },
+  "not_verified": [
+    "VPN billed traffic savings",
+    "Cached and uncached token cost changes",
+    "Long MV visual quality acceptance",
+    "Long-running production stability"
+  ]
+}

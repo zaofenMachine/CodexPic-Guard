@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codexpic-guard"
+version = "0.1.0"
+description = "Local image-byte budgets and reversible image offload for Codex"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.11"
+dependencies = ["aiohttp==3.14.5", "Pillow==13.0.0", "zstandard==0.25.0", "tomlkit==0.15.2"]
+
+[project.urls]
+Repository = "https://github.com/zaofenMachine/CodexPic-Guard"
+Issues = "https://github.com/zaofenMachine/CodexPic-Guard/issues"
+
+[project.scripts]
+codexpic-guard = "codexpic_guard.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
