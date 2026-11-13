@@ -15,6 +15,7 @@ from . import __version__
 from .config import Config, GuardError, loopback
 from .rewrite import rewrite
 from .store import Store
+from .streaming import ResponseCompletion
 
 HOP={'connection','keep-alive','proxy-authenticate','proxy-authorization','te','trailer','transfer-encoding','upgrade','host','content-length'}
 
@@ -51,8 +52,9 @@ def filtered_headers(headers):
     return {k:v for k,v in headers.items() if k.lower() not in hop}
 
 
-def make_app(config:Config,store=None):
+def make_app(config:Config,store=None,*,rewriter=None):
     config.validate();store=store or Store(config.data_dir,config.policy)
+    rewrite_request=rewriter or rewrite
     app=web.Application(client_max_size=config.max_request_bytes,handler_args={'auto_decompress':False})
     app['config']=config;app['store']=store;app['slots']=asyncio.Semaphore(config.concurrency)
     app['shutdown_event']=asyncio.Event()
@@ -102,7 +104,7 @@ def make_app(config:Config,store=None):
             chunks.append(chunk)
         data=b''.join(chunks);del chunks
         encoded_before=len(data);encoding=req.headers.get('Content-Encoding','identity')
-        stats={};scope='';rewritten=False
+        stats={};scope='';rewritten=False;expects_stream=False
         is_responses=req.method=='POST' and req.path.rstrip('/').endswith(('/responses','/responses/compact'))
         if is_responses:
             raw=await asyncio.to_thread(unpack,data,encoding,config.max_request_bytes)
@@ -110,7 +112,8 @@ def make_app(config:Config,store=None):
             except (ValueError,UnicodeError):raise GuardError('invalid_json','Responses request is not valid JSON.') from None
             del raw
             if not isinstance(body,dict):raise GuardError('invalid_json','Responses request must be an object.')
-            body,scope,stats=await asyncio.to_thread(rewrite,body,req.headers,store,config.policy)
+            expects_stream=bool(body.get('stream')) and not req.path.rstrip('/').endswith('/compact')
+            body,scope,stats=await asyncio.to_thread(rewrite_request,body,req.headers,store,config.policy)
             rewritten=stats.get('changed',False)
             if rewritten:
                 out=json.dumps(body,ensure_ascii=False,separators=(',',':')).encode('utf-8')
@@ -129,18 +132,33 @@ def make_app(config:Config,store=None):
                 raise GuardError('upstream_redirect_refused','A model endpoint redirected the request. Set its final upstream URL explicitly; CodexPic will not let the client replay an unbudgeted original body outside the guard.',502)
             response=web.StreamResponse(status=upstream.status,headers=filtered_headers(upstream.headers))
             await response.prepare(req)
-            complete=False
+            complete=False;acknowledged=False
+            # Some Codex Responses streams omit Content-Type. The endpoint/body
+            # and SSE events, rather than that optional header, identify them.
+            tracker=ResponseCompletion() if is_responses and upstream.headers.get('Content-Encoding','identity').lower() in ('','identity') else None
+            def acknowledge():
+                nonlocal acknowledged
+                if not acknowledged and 200<=upstream.status<300:
+                    store.consume_grants(scope,stats.get('original_grants',[]))
+                    store.delivered(scope,stats.get('retained_ids',[]))
+                    acknowledged=True
             try:
-                async for chunk in upstream.content.iter_chunked(64*1024):await response.write(chunk)
+                async for chunk in upstream.content.iter_chunked(64*1024):
+                    await response.write(chunk)
+                    if tracker:
+                        tracker.feed(chunk)
+                        if tracker.successful:acknowledge()
                 await response.write_eof();complete=True
             except (aiohttp.ClientError,ConnectionError,TimeoutError):
                 if req.transport: req.transport.close()
             finally:
                 if is_responses:
-                    store.record(scope,encoded_before,len(data),stats,upstream.status if complete else 0)
-                    if complete and 200<=upstream.status<300:
-                        store.consume_grants(scope,stats.get('original_grants',[]))
-                        store.delivered(scope,stats.get('retained_ids',[]))
+                    # A successful terminal event is the stream completion, even
+                    # when Codex closes before HTTP EOF. Failed/truncated SSE must
+                    # retain pending images and original grants for retry.
+                    success=tracker.successful if tracker and (expects_stream or tracker.saw_sse) else complete
+                    store.record(scope,encoded_before,len(data),stats,upstream.status if success else 0)
+                    if success:acknowledge()
             return response
     app.router.add_route('*','/{path:.*}',handle)
     return app

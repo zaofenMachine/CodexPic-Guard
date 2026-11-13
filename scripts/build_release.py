@@ -15,7 +15,7 @@ def main():
         p=ROOT/name
         if p.exists():files.append(p)
     files.extend(ROOT.glob('*.ps1'))
-    for folder in ('src','tests','scripts'):
+    for folder in ('src','tests','scripts','experiments'):
         files.extend(p for p in (ROOT/folder).rglob('*.py') if '__pycache__' not in p.parts)
     for suffix in ('*.md','*.json'):
         files.extend((ROOT/'docs').rglob(suffix))

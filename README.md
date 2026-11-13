@@ -2,7 +2,9 @@
 
 为 Codex 长时间看图任务控制上传体积的本地工具。采用 **HTTP 请求代理 + MCP 原图恢复工具**，无需修改 Codex 可执行文件。
 
-项目维护仓库：[zaofenMachine/CodexPic-Guard](https://github.com/zaofenMachine/CodexPic-Guard)。当前版本为 **0.1.0，实验阶段**。
+项目维护仓库：[zaofenMachine/CodexPic-Guard](https://github.com/zaofenMachine/CodexPic-Guard)。当前版本为 **0.1.1，实验阶段**。
+
+2026-11-14 的继续研究确认：当前 HTTP Guard 的未缓存输入可能明显增加；保留原生 WebSocket 并只压缩新图的原型更有希望。详见 [实验结果与限制](docs/RESEARCH-2026-11-14.md)。默认版尚未采用该原型，不应把上传量减少理解为费用减少。
 
 原图按 SHA-256 保存在本机，出站请求中的预览图有单图预算；历史图片累计超预算时移出最旧图，留下可取回的编号。原会话和项目素材不改写。
 
@@ -96,6 +98,7 @@ Disable 暂不终止服务，因为旧的运行中聊天可能仍连接它。重
 
 - 当前实测接入：Codex CLI `0.166.0-alpha.5.1`，隔离 CODEX_HOME，真实客户端 + 真实 MCP + 本地模拟 Responses 服务。
 - HTTP 的身份、gzip、zstd、deflate 请求体解码及预算处理有测试；SSE 流式转发、失败不走 DIRECT、重定向不自动跟随有测试。
+- 0.1.1 对未压缩 SSE 以成功完成事件结算图片送达，兼容 Codex 在 HTTP 流完全结束前关闭连接的行为。压缩的响应仍使用保守的完整传输判断；这与请求体压缩支持是两回事。
 - 工具为了可靠改写完整历史，会对 Responses WebSocket 升级返回 426，让 Codex 回退 HTTP。这会改变连接方式，不能承诺更低延迟或更高缓存命中率。
 - 非空 `previous_response_id` 的增量 HTTP 请求会被拒绝；缺少完整历史时无法可靠执行旧图预算。不会偷偷删掉该字段来伪装成功。
 - 模型请求的上游重定向会明确拒绝，避免客户端带着未改写的原请求绕过代理；其他转发也不会自动跟随重定向。

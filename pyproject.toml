@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "codexpic-guard"
-version = "0.1.0"
+version = "0.1.1"
 description = "Local image-byte budgets and reversible image offload for Codex"
 readme = "README.md"
 license = "MIT"

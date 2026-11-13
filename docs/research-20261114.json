@@ -1,0 +1,1992 @@
+{
+  "measurement_date": "2026-11-14",
+  "codex_cli": "codex-cli 0.166.0-alpha.5.1",
+  "units": "bytes (decimal MB in prose); application payload, not TLS/TCP/VPN billing",
+  "mock_transport": {
+    "kind": "native CLI against local synthetic mock only",
+    "token_usage_measured": false,
+    "wire_or_vpn_billing_measured": false,
+    "codex_version": "codex-cli 0.166.0-alpha.5.1",
+    "steps": 6,
+    "arms": [
+      {
+        "arm": "http",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 0.456,
+        "websocket_connections": 0,
+        "completed_model_steps": 7,
+        "request_payload_bytes": 20056926,
+        "image_base64_bytes": 19634720,
+        "requests": [
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2863928,
+            "encoding": "identity",
+            "input_items": 7,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2864326,
+            "encoding": "identity",
+            "input_items": 9,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2864724,
+            "encoding": "identity",
+            "input_items": 11,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2865390,
+            "encoding": "identity",
+            "input_items": 13,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2865788,
+            "encoding": "identity",
+            "input_items": 15,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2866186,
+            "encoding": "identity",
+            "input_items": 17,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 2866584,
+            "encoding": "identity",
+            "input_items": 19,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          }
+        ]
+      },
+      {
+        "arm": "websocket",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 0.369,
+        "websocket_connections": 1,
+        "completed_model_steps": 7,
+        "request_payload_bytes": 2877455,
+        "image_base64_bytes": 2804960,
+        "requests": [
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1419,
+            "encoding": "identity",
+            "input_items": 0,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": false,
+            "generate_false": true
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2864140,
+            "encoding": "identity",
+            "input_items": 7,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2206,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          }
+        ]
+      },
+      {
+        "arm": "ws-cache-miss",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 0.62,
+        "websocket_connections": 2,
+        "completed_model_steps": 7,
+        "request_payload_bytes": 5743590,
+        "image_base64_bytes": 5609920,
+        "requests": [
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1419,
+            "encoding": "identity",
+            "input_items": 0,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": false,
+            "generate_false": true
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2864160,
+            "encoding": "identity",
+            "input_items": 7,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 1938,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false,
+            "injected_cache_miss": true
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2865579,
+            "encoding": "identity",
+            "input_items": 13,
+            "image_blocks": 1,
+            "image_base64_bytes": 2804960,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2206,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2206,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          },
+          {
+            "transport": "websocket",
+            "encoded_payload_bytes": 2206,
+            "encoding": "identity",
+            "input_items": 1,
+            "image_blocks": 0,
+            "image_base64_bytes": 0,
+            "previous_response_id_present": true,
+            "generate_false": false
+          }
+        ]
+      },
+      {
+        "arm": "guard-http",
+        "exit_code": 0,
+        "passed": true,
+        "seconds": 0.874,
+        "websocket_connections": 0,
+        "completed_model_steps": 7,
+        "request_payload_bytes": 4651568,
+        "image_base64_bytes": 4225872,
+        "requests": [
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 663086,
+            "encoding": "identity",
+            "input_items": 8,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 663752,
+            "encoding": "identity",
+            "input_items": 10,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 664150,
+            "encoding": "identity",
+            "input_items": 12,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 664548,
+            "encoding": "identity",
+            "input_items": 14,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 664946,
+            "encoding": "identity",
+            "input_items": 16,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 665344,
+            "encoding": "identity",
+            "input_items": 18,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          },
+          {
+            "transport": "http",
+            "encoded_payload_bytes": 665742,
+            "encoding": "identity",
+            "input_items": 20,
+            "image_blocks": 1,
+            "image_base64_bytes": 603696,
+            "previous_response_id_present": false,
+            "generate_false": false
+          }
+        ],
+        "guard_metrics": {
+          "images": 1,
+          "scopes": 1,
+          "requests": 7,
+          "input_body_bytes": 20057672,
+          "output_body_bytes": 4651568,
+          "blob_bytes": 2556490
+        }
+      }
+    ]
+  },
+  "controlled_retention": {
+    "kind": "offline synthetic monotonic history; identical fixed scope note in both arms",
+    "token_usage_measured": false,
+    "policy": {
+      "high_bytes": 320000,
+      "low_bytes": 160000,
+      "keep_recent": 1
+    },
+    "arms": [
+      {
+        "mode": "per-request-selection",
+        "requests": 40,
+        "image_slot_change_events": 33,
+        "changed_image_slots": 37,
+        "prefix_preserved_transitions": 6,
+        "zstd_payload_bytes": 3913379,
+        "image_base64_bytes": 5108448,
+        "max_image_base64_bytes": 281568,
+        "rows": [
+          {
+            "step": 1,
+            "images_sent": 1,
+            "image_base64_bytes": 40224,
+            "zstd_payload_bytes": 30792,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": false,
+            "common_input_items": 0
+          },
+          {
+            "step": 2,
+            "images_sent": 2,
+            "image_base64_bytes": 80448,
+            "zstd_payload_bytes": 61126,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 4
+          },
+          {
+            "step": 3,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91384,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 6
+          },
+          {
+            "step": 4,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 121655,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 8
+          },
+          {
+            "step": 5,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 151867,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 10
+          },
+          {
+            "step": 6,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 182119,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 12
+          },
+          {
+            "step": 7,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 212405,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 14
+          },
+          {
+            "step": 8,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91836,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 3
+          },
+          {
+            "step": 9,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91919,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 13
+          },
+          {
+            "step": 10,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91979,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 15
+          },
+          {
+            "step": 11,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92030,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 17
+          },
+          {
+            "step": 12,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92266,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 19
+          },
+          {
+            "step": 13,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92145,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 21
+          },
+          {
+            "step": 14,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92204,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 23
+          },
+          {
+            "step": 15,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92268,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 25
+          },
+          {
+            "step": 16,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92323,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 27
+          },
+          {
+            "step": 17,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92382,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 29
+          },
+          {
+            "step": 18,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92441,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 31
+          },
+          {
+            "step": 19,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92494,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 33
+          },
+          {
+            "step": 20,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92560,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 35
+          },
+          {
+            "step": 21,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92807,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 37
+          },
+          {
+            "step": 22,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92667,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 39
+          },
+          {
+            "step": 23,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92723,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 41
+          },
+          {
+            "step": 24,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92800,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 43
+          },
+          {
+            "step": 25,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92814,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 45
+          },
+          {
+            "step": 26,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92907,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 47
+          },
+          {
+            "step": 27,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92969,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 49
+          },
+          {
+            "step": 28,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93026,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 51
+          },
+          {
+            "step": 29,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93072,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 53
+          },
+          {
+            "step": 30,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93134,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 55
+          },
+          {
+            "step": 31,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93187,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 57
+          },
+          {
+            "step": 32,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93200,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 59
+          },
+          {
+            "step": 33,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93306,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 61
+          },
+          {
+            "step": 34,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93363,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 63
+          },
+          {
+            "step": 35,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93425,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 65
+          },
+          {
+            "step": 36,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93474,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 67
+          },
+          {
+            "step": 37,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93523,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 69
+          },
+          {
+            "step": 38,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93583,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 71
+          },
+          {
+            "step": 39,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93607,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 73
+          },
+          {
+            "step": 40,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93597,
+            "previous_image_slots_changed": 1,
+            "prior_input_is_prefix": false,
+            "common_input_items": 75
+          }
+        ]
+      },
+      {
+        "mode": "sticky-selection",
+        "requests": 40,
+        "image_slot_change_events": 7,
+        "changed_image_slots": 35,
+        "prefix_preserved_transitions": 32,
+        "zstd_payload_bytes": 5815355,
+        "image_base64_bytes": 7642560,
+        "max_image_base64_bytes": 281568,
+        "rows": [
+          {
+            "step": 1,
+            "images_sent": 1,
+            "image_base64_bytes": 40224,
+            "zstd_payload_bytes": 30792,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": false,
+            "common_input_items": 0
+          },
+          {
+            "step": 2,
+            "images_sent": 2,
+            "image_base64_bytes": 80448,
+            "zstd_payload_bytes": 61126,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 4
+          },
+          {
+            "step": 3,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91384,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 6
+          },
+          {
+            "step": 4,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 121655,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 8
+          },
+          {
+            "step": 5,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 151867,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 10
+          },
+          {
+            "step": 6,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 182119,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 12
+          },
+          {
+            "step": 7,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 212405,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 14
+          },
+          {
+            "step": 8,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 91836,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 3
+          },
+          {
+            "step": 9,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 122123,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 18
+          },
+          {
+            "step": 10,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 152380,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 20
+          },
+          {
+            "step": 11,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 182709,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 22
+          },
+          {
+            "step": 12,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 212938,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 24
+          },
+          {
+            "step": 13,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92145,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 13
+          },
+          {
+            "step": 14,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 122375,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 28
+          },
+          {
+            "step": 15,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 152707,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 30
+          },
+          {
+            "step": 16,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 183029,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 32
+          },
+          {
+            "step": 17,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 213268,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 34
+          },
+          {
+            "step": 18,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92441,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 23
+          },
+          {
+            "step": 19,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 122626,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 38
+          },
+          {
+            "step": 20,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 152904,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 40
+          },
+          {
+            "step": 21,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 183114,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 42
+          },
+          {
+            "step": 22,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 213503,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 44
+          },
+          {
+            "step": 23,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 92723,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 33
+          },
+          {
+            "step": 24,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 122935,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 48
+          },
+          {
+            "step": 25,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 153152,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 50
+          },
+          {
+            "step": 26,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 183406,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 52
+          },
+          {
+            "step": 27,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 213727,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 54
+          },
+          {
+            "step": 28,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93026,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 43
+          },
+          {
+            "step": 29,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 123252,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 58
+          },
+          {
+            "step": 30,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 153515,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 60
+          },
+          {
+            "step": 31,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 183777,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 62
+          },
+          {
+            "step": 32,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 214019,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 64
+          },
+          {
+            "step": 33,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93306,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 53
+          },
+          {
+            "step": 34,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 123521,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 68
+          },
+          {
+            "step": 35,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 153774,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 70
+          },
+          {
+            "step": 36,
+            "images_sent": 6,
+            "image_base64_bytes": 241344,
+            "zstd_payload_bytes": 184037,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 72
+          },
+          {
+            "step": 37,
+            "images_sent": 7,
+            "image_base64_bytes": 281568,
+            "zstd_payload_bytes": 214285,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 74
+          },
+          {
+            "step": 38,
+            "images_sent": 3,
+            "image_base64_bytes": 120672,
+            "zstd_payload_bytes": 93583,
+            "previous_image_slots_changed": 5,
+            "prior_input_is_prefix": false,
+            "common_input_items": 63
+          },
+          {
+            "step": 39,
+            "images_sent": 4,
+            "image_base64_bytes": 160896,
+            "zstd_payload_bytes": 123807,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 78
+          },
+          {
+            "step": 40,
+            "images_sent": 5,
+            "image_base64_bytes": 201120,
+            "zstd_payload_bytes": 154064,
+            "previous_image_slots_changed": 0,
+            "prior_input_is_prefix": true,
+            "common_input_items": 80
+          }
+        ]
+      }
+    ]
+  },
+  "live_pilot": [
+    {
+      "arm": "websocket",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 6440359,
+      "image_base64_bytes": 6345844,
+      "seconds": 21.023,
+      "usage": {
+        "input_tokens": 77201,
+        "cached_input_tokens": 61440,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 242,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 15761
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 1497,
+          "encoding": "identity",
+          "input_items": 0,
+          "image_blocks": 0,
+          "image_base64_bytes": 0,
+          "previous_response_id_present": false,
+          "generate_false": true
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 2200829,
+          "encoding": "identity",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 2116080,
+          "previous_response_id_present": true,
+          "generate_false": false
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 2117311,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 1,
+          "image_base64_bytes": 2114540,
+          "previous_response_id_present": true,
+          "generate_false": false
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 2117995,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 1,
+          "image_base64_bytes": 2115224,
+          "previous_response_id_present": true,
+          "generate_false": false
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 2727,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 0,
+          "image_base64_bytes": 0,
+          "previous_response_id_present": true,
+          "generate_false": false
+        }
+      ],
+      "response_usage": [
+        {
+          "input_tokens": 2,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2
+        },
+        {
+          "input_tokens": 17834,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 85,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17919
+        },
+        {
+          "input_tokens": 19095,
+          "input_tokens_details": {
+            "cached_tokens": 17792,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 74,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 19169
+        },
+        {
+          "input_tokens": 20078,
+          "input_tokens_details": {
+            "cached_tokens": 18816,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 74,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20152
+        },
+        {
+          "input_tokens": 20194,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 9,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20203
+        }
+      ]
+    },
+    {
+      "arm": "http",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 14420448,
+      "image_base64_bytes": 19038388,
+      "seconds": 27.288,
+      "usage": {
+        "input_tokens": 77759,
+        "cached_input_tokens": 69376,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 254,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 8383
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 1620470,
+          "encoding": "zstd",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 2116080,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 3208126,
+          "encoding": "zstd",
+          "input_items": 9,
+          "image_blocks": 2,
+          "image_base64_bytes": 4230620,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4795744,
+          "encoding": "zstd",
+          "input_items": 11,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4796108,
+          "encoding": "zstd",
+          "input_items": 13,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        }
+      ],
+      "response_usage": []
+    },
+    {
+      "arm": "guard-http",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 5,
+      "request_payload_bytes": 2234143,
+      "image_base64_bytes": 2824972,
+      "seconds": 24.539,
+      "usage": {
+        "input_tokens": 96756,
+        "cached_input_tokens": 84864,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 287,
+        "reasoning_output_tokens": 24,
+        "uncached_input_tokens": 11892
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 239013,
+          "encoding": "zstd",
+          "input_items": 8,
+          "image_blocks": 1,
+          "image_base64_bytes": 282872,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 242550,
+          "encoding": "zstd",
+          "input_items": 12,
+          "image_blocks": 1,
+          "image_base64_bytes": 282872,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 448277,
+          "encoding": "zstd",
+          "input_items": 14,
+          "image_blocks": 2,
+          "image_base64_bytes": 564980,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 652073,
+          "encoding": "zstd",
+          "input_items": 16,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 652230,
+          "encoding": "zstd",
+          "input_items": 18,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false
+        }
+      ],
+      "response_usage": []
+    },
+    {
+      "arm": "ws-preview",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 941646,
+      "image_base64_bytes": 847124,
+      "seconds": 18.742,
+      "usage": {
+        "input_tokens": 77241,
+        "cached_input_tokens": 68992,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 254,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 8249
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 1497,
+          "encoding": "identity",
+          "input_items": 0,
+          "image_blocks": 0,
+          "image_base64_bytes": 0,
+          "previous_response_id_present": false,
+          "generate_false": true,
+          "before_payload_bytes": 1497,
+          "images_previewed": 0
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 367626,
+          "encoding": "identity",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 282872,
+          "previous_response_id_present": true,
+          "generate_false": false,
+          "before_payload_bytes": 2200833,
+          "images_previewed": 1
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 284880,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 1,
+          "image_base64_bytes": 282108,
+          "previous_response_id_present": true,
+          "generate_false": false,
+          "before_payload_bytes": 2117311,
+          "images_previewed": 1
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 284916,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 1,
+          "image_base64_bytes": 282144,
+          "previous_response_id_present": true,
+          "generate_false": false,
+          "before_payload_bytes": 2117995,
+          "images_previewed": 1
+        },
+        {
+          "transport": "websocket",
+          "encoded_payload_bytes": 2727,
+          "encoding": "identity",
+          "input_items": 1,
+          "image_blocks": 0,
+          "image_base64_bytes": 0,
+          "previous_response_id_present": true,
+          "generate_false": false,
+          "before_payload_bytes": 2727,
+          "images_previewed": 0
+        }
+      ],
+      "response_usage": [
+        {
+          "input_tokens": 2,
+          "input_tokens_details": {
+            "cached_tokens": 0,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 0,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 2
+        },
+        {
+          "input_tokens": 17838,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 89,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17927
+        },
+        {
+          "input_tokens": 19103,
+          "input_tokens_details": {
+            "cached_tokens": 17792,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 78,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 19181
+        },
+        {
+          "input_tokens": 20090,
+          "input_tokens_details": {
+            "cached_tokens": 18816,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 78,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20168
+        },
+        {
+          "input_tokens": 20210,
+          "input_tokens_details": {
+            "cached_tokens": 19968,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 9,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20219
+        }
+      ]
+    },
+    {
+      "arm": "http",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 14420232,
+      "image_base64_bytes": 19038388,
+      "seconds": 28.578,
+      "usage": {
+        "input_tokens": 77759,
+        "cached_input_tokens": 69376,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 254,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 8383
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 1620464,
+          "encoding": "zstd",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 2116080,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 3208083,
+          "encoding": "zstd",
+          "input_items": 9,
+          "image_blocks": 2,
+          "image_base64_bytes": 4230620,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4795481,
+          "encoding": "zstd",
+          "input_items": 11,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4796204,
+          "encoding": "zstd",
+          "input_items": 13,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        }
+      ],
+      "response_usage": []
+    },
+    {
+      "arm": "guard-direct",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 1979434,
+      "image_base64_bytes": null,
+      "seconds": 23.106,
+      "usage": {
+        "input_tokens": 78196,
+        "cached_input_tokens": 42880,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 240,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 35316
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [],
+      "response_usage": [],
+      "guard_recorded_statuses": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "guard_pending_images": 2
+    },
+    {
+      "arm": "http",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 14419493,
+      "image_base64_bytes": 19038388,
+      "seconds": 25.162,
+      "usage": {
+        "input_tokens": 77741,
+        "cached_input_tokens": 69376,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 245,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 8365
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 1620388,
+          "encoding": "zstd",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 2116080,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 3207823,
+          "encoding": "zstd",
+          "input_items": 9,
+          "image_blocks": 2,
+          "image_base64_bytes": 4230620,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4795145,
+          "encoding": "zstd",
+          "input_items": 11,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 4796137,
+          "encoding": "zstd",
+          "input_items": 13,
+          "image_blocks": 3,
+          "image_base64_bytes": 6345844,
+          "previous_response_id_present": false,
+          "generate_false": false
+        }
+      ],
+      "response_usage": []
+    },
+    {
+      "arm": "guard-direct",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 1980062,
+      "image_base64_bytes": null,
+      "seconds": 24.582,
+      "usage": {
+        "input_tokens": 78299,
+        "cached_input_tokens": 37504,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 261,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 40795
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [],
+      "response_usage": [],
+      "guard_recorded_statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "guard_pending_images": 0
+    },
+    {
+      "arm": "http-preview",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 1982489,
+      "image_base64_bytes": 2542100,
+      "seconds": 20.933,
+      "usage": {
+        "input_tokens": 77763,
+        "cached_input_tokens": 69376,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 248,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 8387
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 239043,
+          "encoding": "zstd",
+          "input_items": 7,
+          "image_blocks": 1,
+          "image_base64_bytes": 282872,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 1620496,
+          "images_previewed": 1
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 444912,
+          "encoding": "zstd",
+          "input_items": 9,
+          "image_blocks": 2,
+          "image_base64_bytes": 564980,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 3208097,
+          "images_previewed": 2
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 649115,
+          "encoding": "zstd",
+          "input_items": 11,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 4795172,
+          "images_previewed": 3
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 649419,
+          "encoding": "zstd",
+          "input_items": 13,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 4796160,
+          "images_previewed": 3
+        }
+      ],
+      "response_usage": [
+        {
+          "input_tokens": 17838,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 87,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 17925
+        },
+        {
+          "input_tokens": 19101,
+          "input_tokens_details": {
+            "cached_tokens": 17792,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 76,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 19177
+        },
+        {
+          "input_tokens": 20353,
+          "input_tokens_details": {
+            "cached_tokens": 18816,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 76,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20429
+        },
+        {
+          "input_tokens": 20471,
+          "input_tokens_details": {
+            "cached_tokens": 20352,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 9,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20480
+        }
+      ]
+    },
+    {
+      "arm": "guard-stable-note",
+      "model": "gpt-6-astra",
+      "passed": true,
+      "generation_requests": 4,
+      "request_payload_bytes": 1985342,
+      "image_base64_bytes": 2542100,
+      "seconds": 20.584,
+      "usage": {
+        "input_tokens": 78099,
+        "cached_input_tokens": 61824,
+        "cache_write_input_tokens": 0,
+        "output_tokens": 254,
+        "reasoning_output_tokens": 0,
+        "uncached_input_tokens": 16275
+      },
+      "global_configuration_unchanged": true,
+      "visual_codes_correct": 3,
+      "visual_tool_calls": 3,
+      "request_shapes": [
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 239567,
+          "encoding": "zstd",
+          "input_items": 8,
+          "image_blocks": 1,
+          "image_base64_bytes": 282872,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 239567,
+          "images_previewed": 0
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 445372,
+          "encoding": "zstd",
+          "input_items": 10,
+          "image_blocks": 2,
+          "image_base64_bytes": 564980,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 445372,
+          "images_previewed": 0
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 650013,
+          "encoding": "zstd",
+          "input_items": 12,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 650013,
+          "images_previewed": 0
+        },
+        {
+          "transport": "http",
+          "encoded_payload_bytes": 650390,
+          "encoding": "zstd",
+          "input_items": 14,
+          "image_blocks": 3,
+          "image_base64_bytes": 847124,
+          "previous_response_id_present": false,
+          "generate_false": false,
+          "before_payload_bytes": 650390,
+          "images_previewed": 0
+        }
+      ],
+      "response_usage": [
+        {
+          "input_tokens": 17919,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 89,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 18008
+        },
+        {
+          "input_tokens": 19184,
+          "input_tokens_details": {
+            "cached_tokens": 12416,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 78,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 19262
+        },
+        {
+          "input_tokens": 20438,
+          "input_tokens_details": {
+            "cached_tokens": 19072,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 78,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20516
+        },
+        {
+          "input_tokens": 20558,
+          "input_tokens_details": {
+            "cached_tokens": 17920,
+            "cache_write_tokens": 0
+          },
+          "output_tokens": 9,
+          "output_tokens_details": {
+            "reasoning_tokens": 0
+          },
+          "total_tokens": 20567
+        }
+      ],
+      "guard_recorded_statuses": [
+        200,
+        200,
+        200,
+        200
+      ],
+      "guard_pending_images": 0
+    }
+  ],
+  "limits": [
+    "One synthetic three-image workflow; sequential nonrandomized arms, not a cost benchmark.",
+    "Cache availability, implicit breakpoints, tool discovery and outputs vary between runs.",
+    "HTTP payloads use zstd; WebSocket messages use identity without negotiated message compression.",
+    "CLI turn.completed token totals exclude WebSocket prewarm and do not establish ChatGPT quota cost.",
+    "Guard-http pilot used five generation requests; other successful arms used four.",
+    "Two setup attempts failed: MCP process import (zero model calls), then missing read-only tool annotation (two model calls). They are excluded from successful comparisons.",
+    "Historical MV data and raw logs are not part of this export."
+  ]
+}
